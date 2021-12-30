@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function-Rekursif</title>
+  </head>
+  <body>
+    <script>
+      //Contoh Rekursif
+
+      /*
+      function tes() {
+        return tes();
+      }
+      tes();
+      */
+
+      for (var i = 10; i >= 1; i--) {
+        console.log(i);
+      }
+
+      function tampilAngka(n) {
+        if (n === 0) {
+          //Pakai Base case agar rekursifnya berhenti
+          return;
+        }
+        console.log(n);
+        return tampilAngka(n - 1);
+      }
+      tampilAngka(20);
+    </script>
+  </body>
+</html>

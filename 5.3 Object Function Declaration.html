@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Function Declaration</title>
+  </head>
+  <body>
+    <script>
+      //Membuat Object
+      //Object Function Declaration
+
+      function buatObjectMahasiswa(nama, nrp, email, jurusan) {
+        let mhs = {};
+        mhs.nama = nama;
+        mhs.nrp = nrp;
+        mhs.email = email;
+        mhs.jurusan = jurusan;
+        return mhs;
+      }
+
+      let mhs3 = buatObjectMahasiswa("Furqon", "426888", "fareqon89@gmail.com", "Ekonomi Syariah");
+
+      let mhs4 = buatObjectMahasiswa("Furqon", "426888", "fareqon89@gmail.com", "Ekonomi Syariah");
+    </script>
+  </body>
+</html>

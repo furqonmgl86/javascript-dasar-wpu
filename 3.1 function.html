@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+      //Menjumlahkan volume kedua kubus
+      let a = 8;
+      let b = 3;
+      let volumeA;
+      let volumeB;
+      let total;
+
+      volumeA = a * a * a;
+      volumeB = b * b * b;
+
+      total = volumeA + volumeB;
+      document.writeln(`<h1 style="text-align:center;"> Total adalah ${total}</h1>`);
+
+      //Tapi bagaimana jika punya kubus lagi dengan volume yang berbeda
+
+      //Maka dari itu kita membuat yang namanya function
+
+      function jumlahVolumeDuaKubus(c, d) {
+        let total;
+        let volumeC;
+        let volumeD;
+
+        volumeC = c * c * c;
+        volumeD = d * d * d;
+
+        total = volumeC + volumeD;
+
+        return total;
+      }
+
+      document.writeln(`<h1 style="color:blue;text-align:center;"> Total dari function adalah ${jumlahVolumeDuaKubus(8, 3)}</h1>`);
+    </script>
+  </body>
+</html>

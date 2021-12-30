@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Array Penumpang Angkot</title>
+  </head>
+  <body>
+    <script>
+      var penumpang = [];
+      var tambahPenumpang = function (namaPenumpang, penumpang) {
+        //Jika angkot di awal Array kosong
+        if (penumpang.length == 0) {
+          //Tambahkan penumpang di awal array
+          penumpang.push(namaPenumpang);
+          //Kembalikan Isi penumpang & keluar dari function
+          return penumpang;
+        } else {
+          //Telusuri dari Awal
+          for (var i = 0; i < penumpang.length; i++) {
+            //Jika ada kursi yang kosong
+            if (penumpang[i] == undefined) {
+              //Tambah penumpang di kursi tersebut
+              penumpang[i] = namaPenumpang;
+              //Kembalikan isi Array dan keluar dari function
+              return penumpang;
+            }
+            //Jika sudah ada nama yang sama
+            else if (penumpang[i] == namaPenumpang) {
+              //Tampilkan isi pesan kesalahannya
+              console.log(`${namaPenumpang} sudah ada didalam angkot`);
+              //Kembalikan isi Array dan keluar dari function
+              return penumpang;
+            }
+
+            //Jika seluruh kursi terisi
+            else if (i == penumpang.length - 1) {
+              //Tambah penumpang di akhir Array
+              penumpang.push(namaPenumpang);
+              //Kembalikan isi Array dan keluar dari function
+              return penumpang;
+            }
+          }
+        }
+      };
+
+      var hapusPenumpang = function (namaPenumpang, penumpang) {
+        //Ketika angkot kosong
+        if (penumpang.length == 0) {
+          console.log("Angkot Masih Kosong");
+        } // Ketika sudah ada penumpang
+        else {
+          for (var i = 0; i < penumpang.length; i++)
+            //Cek apakah penumpanng dengan kursi tersebut namanya sama gak
+            if (penumpang[i] == namaPenumpang) {
+              penumpang[i] == undefined;
+              //Kembalikan isi Array dan keluar dari function
+              return penumpang;
+            } else if (i == penumpang.length - 1) {
+              console.log(`${namaPenumpang} tidak ada didalam angkot`);
+              //Kembalikan isi Array dan keluar dari function
+              return penumpang;
+            }
+        }
+
+        return penumpang;
+      };
+    </script>
+  </body>
+</html>

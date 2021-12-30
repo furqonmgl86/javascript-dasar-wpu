@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Parameter dan Argument</title>
+  </head>
+  <body>
+    <script>
+      function tambah() {
+        return arguments;
+      }
+
+      var tes = tambah(10, 20, 30, "Fitri", false);
+      console.log(tes);
+
+      // Kasus Lain
+      // Memanfaatkan Array Arguments
+
+      function tambahTes(a, b) {
+        return a + b;
+      }
+
+      var tesTambah = tambahTes(3, 4, 5);
+      console.log(tesTambah);
+
+      // Kasus Lain
+
+      function jumlah() {
+        var hasil = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          hasil += arguments[i];
+          document.writeln(`<h1>Berarti Indeks ${i} nilainya ${arguments[i]} adalah </h1>`);
+        }
+        return hasil;
+      }
+
+      var coba = jumlah(3, 4, 3, 5, 8);
+      console.log(coba);
+    </script>
+  </body>
+</html>

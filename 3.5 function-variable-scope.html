@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function-Variable Scope</title>
+  </head>
+  <body>
+    <script>
+      //Global Scope/Window Scope
+      var a = 1;
+
+      function tes() {
+        var b = 2;
+        var a = 3;
+        console.log(window.a); // Didalam function kita dapat mengakses variabel global
+      }
+
+      tes();
+      //console.log(a) // Tidak bisa mengakses variabel local dalam function
+
+      // Buat variabel local usahakan pakai var
+
+      var c = 4;
+      function tesKan(c) {
+        console.log(c);
+      }
+
+      tesKan(2);
+      console.log(c);
+    </script>
+  </body>
+</html>

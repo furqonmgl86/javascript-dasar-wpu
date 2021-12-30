@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Constructur</title>
+  </head>
+  <body>
+    <script>
+      //Membuat Object
+      //Object object Constructur
+      //Biasanya nama awalnya pakai huruf besar
+      function Mahasiswa(nama, stambuk, rayon, jurusan) {
+        // Tanpa variable di awal
+        // anggap aja ada var this = {};
+        this.nama = nama;
+        this.stambuk = stambuk;
+        this.maskan = rayon;
+        this.jurusan = jurusan;
+        //tanpa return
+        // anggap aja ada return this
+      }
+
+      // Harus pakai keyword new
+      let mhs4 = new Mahasiswa("Fitri", "093232", "Hatiku", "Kasih Sayang");
+    </script>
+  </body>
+</html>

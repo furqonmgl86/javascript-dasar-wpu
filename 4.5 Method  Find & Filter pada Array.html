@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method Filter & Find array</title>
+  </head>
+  <body>
+    <script>
+      //Method Filter dan Find pada Array
+
+      //FILTER (Bisa mengembalikan banyak nilai)
+      var angka = [1, 2, 10, 5, 20, 30, 40, 54];
+      var angka2 = angka.filter(function (e) {
+        return e > 4; //banyak nilai
+      });
+      console.log(angka2.join(" - "));
+
+      //FIND (Mengembalikan satu nilai)
+      var number = [1, 2, 10, 5, 20, 30, 40, 54];
+      var number2 = number.find(function (x) {
+        return x > 4; //satu nilai
+      });
+      console.log(number2);
+    </script>
+  </body>
+</html>

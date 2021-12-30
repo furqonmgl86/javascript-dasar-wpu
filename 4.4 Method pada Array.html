@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Method pada array</title>
+  </head>
+  <body>
+    <script>
+      //Method pada Array
+
+      //1. Join (mengubah isi array menjadi string)
+
+      var arr = ["Muhammad", "Furqon", "Fitri"];
+      console.log(arr.join()); //secara default pakai koma ya
+
+      var nama = ["Muhammad", "Furqon", "Fitri"];
+      console.log(nama.join(" - ")); // kalau mau pakai tanda minus bukan koma
+
+      //2. Push adalah menambah dan mendorong (Memasukan element baru di akhir isi array)
+      var namaAja = ["Muhammad", "Furqon", "Fitri"];
+      namaAja.push("Fauziah");
+      console.log(namaAja.join(" - "));
+
+      //Push nambah elemen dari satu
+      var namaAja1 = ["Muhammad", "Furqon", "Fitri"];
+      namaAja1.push("Fauziah", "Sayangku", "Cintaku");
+      console.log(namaAja1.join(" - "));
+
+      //3. Push (untuk memecahkn atau menghapus)
+      var namaAja2 = ["Muhammad", "Furqon", "Fitri"];
+      namaAja2.pop();
+      namaAja2.pop();
+      console.log(namaAja2.join(" - "));
+
+      //4. Unshift (Menambah elemen baru di awal isi array)
+      var kucing = ["Abbay", "Mimi", "Ankun"];
+      kucing.unshift("Jelly"); // maka ada awal
+      console.log(kucing.join(" - "));
+
+      //4. Shift (Menghapus elemen awal isi array)
+      var kucingku = ["Abbay", "Mimi", "Ankun"];
+      kucingku.shift(); // hapus di awal
+      console.log(kucingku.join(" - "));
+
+      // Perbedaan push, pop dan shift, unshift , kalau push sama pop cuma menggantikannya ke undifenied, sedangakan kalau shifht dan unshift langsung menghapus
+
+      //Kalau nambah di tengah2 gimana ya
+
+      //5. Splice (menyisipkan elemen array di tengah2)
+      //splice(indexAwal, maudihapusBerapa, mauditambahelemenapa)
+      var cat = ["Abbay", "Mimi", "Ankun"];
+      cat.splice(2, 0, "Coki", "Putma");
+      console.log(cat.join(" - "));
+
+      //
+      var sayangKu = ["Abbay", "Mimi", "Ankun"];
+      sayangKu.splice(0, 3, "Furqon", "Sayang", "Fitri");
+      console.log(sayangKu.join(" - "));
+
+      //6. Slice (Mengiris sebuah array menjadi array baru)
+      var sayat = ["Abbay", "Mimi", "Ankun", "Jelly", "Putma"];
+      var sayat2 = sayat.slice(1, 4);
+      console.log(sayat.join(" - "));
+      console.log(sayat2.join(" - "));
+
+      //7. FOREACH
+      var angka = [1, 2, 3, 4, 5, 6, 7, 8];
+      // contoh gak pakai foreach
+      for (var i = 0; i < angka.length; i++) {
+        console.log(angka[i]);
+      }
+
+      // contoh pakai forEach
+      angka.forEach(function (e) {
+        console.log(e);
+      });
+
+      // pakai foreach lengkap
+
+      var namaSantri = ["Furqon", "Jumzud", "Sidi", "Najih"];
+      namaSantri.forEach(function (s, d) {
+        console.log(`Ustadz yang ke ${d + 1} adalah si ${s}`);
+      });
+
+      //8. MAP (Mengembalikan array)
+      //kalau pakai foreach
+      var number = [1, 6, 3, 11, 5, 9, 7, 8];
+      number.forEach(function (b) {
+        console.log(b);
+      });
+
+      //kalau pakai map
+      var number = [1, 6, 3, 11, 5, 9, 7, 8];
+      var number2 = number.map(function (c) {
+        return c * 2;
+      });
+      console.log(number2.join(" - "));
+
+      //9. Sort (menyusun array)
+      var roqm = [1, 6, 3, 5, 9, 7, 8];
+      console.log(roqm.join(" - ")); // Sebelum di urutkan
+      roqm.sort();
+      console.log(roqm.join(" - ")); // sesudah diurutkan
+
+      // kalau ada angka 10, 11, 20, dll gimana kok gak sesuai
+      var roqm2 = [1, 6, 3, 5, 9, 7, 8, 10, 11, 20, 22, 32];
+      console.log(roqm2.join(" - ")); // Sebelum di urutkan
+      roqm2.sort();
+      console.log(roqm2.join(" - ")); // sesudah diurutkan tapi hasilnya goma ya
+
+      //Maka caranya
+      roqm2.sort(function (x, z) {
+        return x - z;
+      });
+      console.log(roqm2.join(" - ")); // baru hasilnya jelaskan
+    </script>
+  </body>
+</html>
